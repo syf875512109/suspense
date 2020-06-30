@@ -1,0 +1,33 @@
+body {
+  
+}
+
+.antd-test-suspense {
+  padding: 50px 200px;
+  padding-right: 0px;
+  border: 1px solid skyblue;
+  /* border-bottom: none; */
+  margin: 20px 100px;
+  display: flex;
+}
+
+.suspense-col1 {
+  width: 40%;
+}
+
+.suspense-col2 {
+  width: 60%;
+}
+
+.suspense-col2 .CodeMirror {
+  /* Set height, width, borders, and global font properties here */
+  font-family: monospace;
+  height: 800px;
+  /* color: black; */
+  direction: ltr;
+  font-size: 24px;
+}
+
+.person-message {
+  /* margin-left: 20px; */
+}
