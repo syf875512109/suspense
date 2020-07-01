@@ -5,6 +5,7 @@ import InfoTraditional from './Component/Traditional';
 import Current from './Component/Current';
 
 import Code from './Component/Code';
+import process from './process.svg';
 
 // import Suspense from './Suspense';
 // const Other = React.lazy(() => import('./List/index.js'))
@@ -14,6 +15,7 @@ function App() {
   const [v2, setV2] = React.useState(false);
   const [v3, setV3] = React.useState(false);
   const [v4, setV4] = React.useState(false);
+  const [v5, setV5] = React.useState(false);
 
   const handleClick = () => {
     setV1(!v1)
@@ -29,6 +31,10 @@ function App() {
 
   const handleClick4 = () => {
     setV4(!v4)
+  }
+
+  const handleClick5 = () => {
+    setV5(!v5)
   }
 
   return (
@@ -93,10 +99,15 @@ export default PersonalInfo;
       <div className="antd-test-suspense">
         <div className="suspense-col1">
           <Button type="primary" onClick={handleClick2}>个人信息Suspense</Button>
+
+          <Button type="primary" onClick={handleClick5} style={{ marginLeft: '20px' }}>图片</Button>
           <Divider />
           <Suspense fallback={<Spin />}>
             {v2 && <Current />}
           </Suspense>
+          <div>
+            {v5 && <img src={process} />}
+          </div>
         </div>
         <div className="suspense-col2">
           <Button type="primary" onClick={handleClick4}>代码</Button>
